@@ -1,7 +1,7 @@
 import React from 'react';
 
-import styles from './Landing.module.scss';
+import { Title } from '@mantine/core';
 
 export const Landing: React.FC = () => {
-  return <div className={styles.text}>Landing</div>;
+  return <Title order={1}>Five Star Auto Leather</Title>;
 };
