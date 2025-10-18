@@ -1,19 +1,19 @@
 import { ActionIcon, Container, Grid, Group, Text, Title } from '@mantine/core';
-import { IconAccessibleFilled, IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react';
 
 import { Logo } from '../Logo';
 import styles from './Footer.module.scss';
 
 export const Footer: React.FC = () => {
   return (
-    <Container size="xl" py="md" px={50}>
+    <Container size="xl" py="lg" px={50}>
       <Grid>
-        <Grid.Col span={{ base: 12, sm: 4 }}>
+        <Grid.Col span={{ base: 12, sm: 4 }} className={styles.logoCol}>
           <Logo width={120} />
         </Grid.Col>
-        <Grid.Col span={{ base: 12, sm: 8 }}>
+        <Grid.Col span={{ base: 12, sm: 8 }} className={styles.contentCol}>
           <Grid gutter={16}>
-            <Grid.Col span={6}>
+            <Grid.Col span={{ base: 12, sm: 6 }}>
               <Title order={3} className={styles.sectionTitle}>
                 Visit Us
               </Title>
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
               <Text size="sm">#05-05 AMK AutoPoint</Text>
               <Text size="sm">Singapore 568047</Text>
             </Grid.Col>
-            <Grid.Col span={6}>
+            <Grid.Col span={{ base: 12, sm: 6 }}>
               <Title order={3} className={styles.sectionTitle}>
                 Opening Hours
               </Title>
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
               <Text size="sm">Saturday: 9am-12pm</Text>
               <Text size="sm">Sunday & Public Holidays: Closed</Text>
             </Grid.Col>
-            <Grid.Col span={6}>
+            <Grid.Col span={{ base: 12, sm: 6 }}>
               <Title order={3} className={styles.sectionTitle}>
                 Contact Us
               </Title>
@@ -51,11 +51,11 @@ export const Footer: React.FC = () => {
                 sales@fivestarautoleather.com
               </Text>
             </Grid.Col>
-            <Grid.Col span={6}>
+            <Grid.Col span={{ base: 12, sm: 6 }}>
               <Title order={3} className={styles.sectionTitle}>
                 Follow Us
               </Title>
-              <Group gap={8} align="center">
+              <Group gap={8} align="center" className={styles.socialMediaContainer}>
                 <ActionIcon
                   variant="transparent"
                   color="gray"

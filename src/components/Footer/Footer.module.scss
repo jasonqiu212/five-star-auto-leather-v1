@@ -1,4 +1,25 @@
+@import '@/styles/mantine';
+
 .sectionTitle {
   font-size: 14px;
   margin-bottom: 12px;
+}
+
+.logoCol {
+  @include smaller-than($mantine-breakpoint-sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contentCol {
+  @include smaller-than($mantine-breakpoint-sm) {
+    text-align: center;
+  }
+}
+
+.socialMediaContainer {
+  @include smaller-than($mantine-breakpoint-sm) {
+    justify-content: center;
+  }
 }
