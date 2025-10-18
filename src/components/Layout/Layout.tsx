@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 
 import { AppShell } from '@mantine/core';
 
-import { Footer } from '../Footer';
 import { Header } from '../Header';
 
 export const Layout: React.FC = () => {
@@ -14,13 +13,9 @@ export const Layout: React.FC = () => {
         <Header />
       </AppShell.Header>
 
-      <AppShell.Main>
+      <AppShell.Main px={0} pt={59}>
         <Outlet />
       </AppShell.Main>
-
-      <AppShell.Footer>
-        <Footer />
-      </AppShell.Footer>
     </AppShell>
   );
 };

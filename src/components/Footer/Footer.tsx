@@ -1,6 +1,7 @@
 import { ActionIcon, Container, Grid, Group, Text, Title } from '@mantine/core';
 import { IconAccessibleFilled, IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react';
 
+import { Logo } from '../Logo';
 import styles from './Footer.module.scss';
 
 export const Footer: React.FC = () => {
@@ -8,7 +9,7 @@ export const Footer: React.FC = () => {
     <Container size="xl" py="md" px={50}>
       <Grid>
         <Grid.Col span={{ base: 12, sm: 4 }}>
-          <IconAccessibleFilled />
+          <Logo width={120} />
         </Grid.Col>
         <Grid.Col span={{ base: 12, sm: 8 }}>
           <Grid gutter={16}>
@@ -33,15 +34,20 @@ export const Footer: React.FC = () => {
                 Contact Us
               </Title>
               <Text size="sm">
-                <Text component="a" href="tel:91729570">
+                <Text component="a" href="tel:91729570" td="underline">
                   9172 9570
                 </Text>{' '}
                 /{' '}
-                <Text component="a" href="tel:87909677">
+                <Text component="a" href="tel:87909677" td="underline">
                   8790 9677
                 </Text>
               </Text>
-              <Text size="sm" component="a" href="mailto:sales@fivestarautoleather.com">
+              <Text
+                size="sm"
+                component="a"
+                href="mailto:sales@fivestarautoleather.com"
+                td="underline"
+              >
                 sales@fivestarautoleather.com
               </Text>
             </Grid.Col>
