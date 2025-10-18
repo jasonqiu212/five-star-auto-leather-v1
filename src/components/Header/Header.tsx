@@ -2,8 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-
-import classes from './Header.module.scss';
+import { IconAccessibleFilled } from '@tabler/icons-react';
 
 const links = [
   { link: '/our-story', label: 'Our Story' },
@@ -20,20 +19,22 @@ export const Header: React.FC = () => {
     <NavLink
       key={link.label}
       to={link.link}
-      className={({ isActive }) => (isActive ? classes.active : '')}
+      className={({ isActive }) => (isActive ? 'bg-blue-light text-blue-filled' : '')}
     >
       {link.label}
     </NavLink>
   ));
 
   return (
-    <Container size="xl" h="100%" style={{ display: 'flex', alignItems: 'center' }}>
-      {/* <MantineLogo size={28} /> */}
-      <Group gap={5} visibleFrom="xs">
-        {items}
-      </Group>
+    <Container size="xl" px={50} h="100%" style={{ display: 'flex', alignItems: 'center' }}>
+      <Group justify="space-between" align="center" w="100%">
+        <IconAccessibleFilled />
+        <Group gap={12} visibleFrom="sm">
+          {items}
+        </Group>
 
-      <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+      </Group>
     </Container>
   );
 };
