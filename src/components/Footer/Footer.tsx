@@ -1,83 +1,87 @@
-import { ActionIcon, Container, Group, Text } from '@mantine/core';
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+import { ActionIcon, Container, Grid, Group, Text, Title } from '@mantine/core';
+import { IconAccessibleFilled, IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react';
 
-const data = [
-  {
-    title: 'About',
-    links: [
-      { label: 'Features', link: '#' },
-      { label: 'Pricing', link: '#' },
-      { label: 'Support', link: '#' },
-      { label: 'Forums', link: '#' },
-    ],
-  },
-  {
-    title: 'Project',
-    links: [
-      { label: 'Contribute', link: '#' },
-      { label: 'Media assets', link: '#' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
-    ],
-  },
-  {
-    title: 'Community',
-    links: [
-      { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
-      { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' },
-    ],
-  },
-];
+import styles from './Footer.module.scss';
 
 export const Footer: React.FC = () => {
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Text<'a'>
-        key={index}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </Text>
-    ));
-
-    return (
-      <div key={group.title}>
-        <Text>{group.title}</Text>
-        {links}
-      </div>
-    );
-  });
-
   return (
-    <Container size="xl" py="md">
-      <div>
-        {/* <MantineLogo size={30} /> */}
-        <Text size="xs" c="dimmed">
-          Custom Automotive Interiors | Quality Workmanship | Five Star Service since 2005
-        </Text>
-      </div>
-      <div>{groups}</div>
-      <Group justify="space-between" mt="xl">
-        <Text c="dimmed" size="sm">
-          © 2025 Five Star Auto Leather. All rights reserved.
-        </Text>
+    <Container size="xl" py="md" px={50}>
+      <Grid>
+        <Grid.Col span={{ base: 12, sm: 4 }}>
+          <IconAccessibleFilled />
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, sm: 8 }}>
+          <Grid gutter={16}>
+            <Grid.Col span={6}>
+              <Title order={3} className={styles.sectionTitle}>
+                Visit Us
+              </Title>
+              <Text size="sm">10 Ang Mo Kio Industrial Park 2A</Text>
+              <Text size="sm">#05-05 AMK AutoPoint</Text>
+              <Text size="sm">Singapore 568047</Text>
+            </Grid.Col>
+            <Grid.Col span={6}>
+              <Title order={3} className={styles.sectionTitle}>
+                Opening Hours
+              </Title>
+              <Text size="sm">Monday-Friday: 9am-6pm</Text>
+              <Text size="sm">Saturday: 9am-12pm</Text>
+              <Text size="sm">Sunday & Public Holidays: Closed</Text>
+            </Grid.Col>
+            <Grid.Col span={6}>
+              <Title order={3} className={styles.sectionTitle}>
+                Contact Us
+              </Title>
+              <Text size="sm">
+                <Text component="a" href="tel:91729570">
+                  9172 9570
+                </Text>{' '}
+                /{' '}
+                <Text component="a" href="tel:87909677">
+                  8790 9677
+                </Text>
+              </Text>
+              <Text size="sm" component="a" href="mailto:sales@fivestarautoleather.com">
+                sales@fivestarautoleather.com
+              </Text>
+            </Grid.Col>
+            <Grid.Col span={6}>
+              <Title order={3} className={styles.sectionTitle}>
+                Follow Us
+              </Title>
+              <Group gap={8} align="center">
+                <ActionIcon
+                  variant="transparent"
+                  color="gray"
+                  component="a"
+                  href="https://www.facebook.com/fivestarautoleather/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandFacebook stroke={1.5} />
+                </ActionIcon>
+                <ActionIcon
+                  variant="transparent"
+                  color="gray"
+                  component="a"
+                  href="https://www.instagram.com/fivestarautoleather/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandInstagram stroke={1.5} />
+                </ActionIcon>
+                {/* <ActionIcon variant="transparent" color="gray" component="a" href="/youtube">
+                  <IconBrandInstagram stroke={1.5} />
+                </ActionIcon> */}
+              </Group>
+            </Grid.Col>
+          </Grid>
+        </Grid.Col>
+      </Grid>
 
-        <Group gap={0} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandInstagram size={18} stroke={1.5} />
-          </ActionIcon>
-        </Group>
-      </Group>
+      <Text c="dimmed" size="sm" mt="xl" ta="center">
+        © {new Date().getFullYear()} Five Star Auto Leather. All rights reserved.
+      </Text>
     </Container>
   );
 };
