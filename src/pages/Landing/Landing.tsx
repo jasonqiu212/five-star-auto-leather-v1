@@ -4,6 +4,7 @@ import { Button, Grid, Image, Stack, Text, Title, Transition } from '@mantine/co
 
 import { Footer } from '../../components/Footer';
 import styles from './Landing.module.scss';
+import { WhatWeDo } from './components/WhatWeDo';
 
 export const Landing: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -43,6 +44,7 @@ export const Landing: React.FC = () => {
           </Transition>
         </Grid.Col>
       </Grid>
+      <WhatWeDo />
       <div id="contact">
         <Footer />
       </div>
