@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -13,20 +13,15 @@ const links = [
 
 export const Header: React.FC = () => {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
-    <a
+    <NavLink
       key={link.label}
-      href={link.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
+      to={link.link}
+      className={({ isActive }) => (isActive ? 'active' : '')}
     >
       {link.label}
-    </a>
+    </NavLink>
   ));
 
   return (
