@@ -30,8 +30,8 @@ export const WhatWeDo: React.FC = () => {
         <Title order={2}>What We Do</Title>
 
         <Grid gutter={12}>
-          {items.map((item) => (
-            <Grid.Col span={{ base: 12, sm: 4 }}>
+          {items.map((item, index) => (
+            <Grid.Col span={{ base: 12, sm: 4 }} key={index}>
               <Stack key={item.title} align="center">
                 <Image src={item.imageUrl} alt={item.title} w="100%" maw={350} />
                 <Title order={3}>{item.title}</Title>
