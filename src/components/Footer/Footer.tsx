@@ -6,7 +6,7 @@ import styles from './Footer.module.scss';
 
 export const Footer: React.FC = () => {
   return (
-    <Container size="xl" py="lg" px={50}>
+    <Container size="xl" py="xl" px={50}>
       <Grid>
         <Grid.Col span={{ base: 12, sm: 4 }} className={styles.logoCol}>
           <Logo width={120} />

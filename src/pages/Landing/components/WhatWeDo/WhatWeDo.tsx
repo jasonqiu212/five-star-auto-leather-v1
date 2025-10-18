@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Divider, Grid, Image, Stack, Text, Title } from '@mantine/core';
+import { Container, Grid, Image, Stack, Text, Title } from '@mantine/core';
 
 const items = [
   {
@@ -25,8 +25,8 @@ const items = [
 
 export const WhatWeDo: React.FC = () => {
   return (
-    <Container size="xl">
-      <Stack w="100%" align="center" py={36} gap={24}>
+    <Container size="xl" py="xl">
+      <Stack w="100%" align="center" gap={24}>
         <Title order={2}>What We Do</Title>
 
         <Grid gutter={12}>
