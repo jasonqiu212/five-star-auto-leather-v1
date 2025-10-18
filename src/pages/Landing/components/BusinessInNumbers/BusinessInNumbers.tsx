@@ -11,7 +11,7 @@ const items = [
   },
   {
     statistic: '21',
-    description: 'years in business',
+    description: 'experts working',
   },
   {
     statistic: '100%',
