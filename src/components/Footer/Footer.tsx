@@ -53,19 +53,17 @@ export const Footer: React.FC = () => {
   });
 
   return (
-    <footer>
-      <Container>
-        <div>
-          {/* <MantineLogo size={30} /> */}
-          <Text size="xs" c="dimmed">
-            Custom Automotive Interiors | Quality Workmanship | Five Star Service since 2005
-          </Text>
-        </div>
-        <div>{groups}</div>
-      </Container>
-      <Container>
+    <Container size="xl" py="md">
+      <div>
+        {/* <MantineLogo size={30} /> */}
+        <Text size="xs" c="dimmed">
+          Custom Automotive Interiors | Quality Workmanship | Five Star Service since 2005
+        </Text>
+      </div>
+      <div>{groups}</div>
+      <Group justify="space-between" mt="xl">
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2025 Five Star Auto Leather. All rights reserved.
         </Text>
 
         <Group gap={0} justify="flex-end" wrap="nowrap">
@@ -79,7 +77,7 @@ export const Footer: React.FC = () => {
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
-      </Container>
-    </footer>
+      </Group>
+    </Container>
   );
 };

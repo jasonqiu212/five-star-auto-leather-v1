@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
+import classes from './Header.module.scss';
+
 const links = [
   { link: '/our-story', label: 'Our Story' },
   { link: '/what-we-do', label: 'What We Do' },
@@ -18,22 +20,20 @@ export const Header: React.FC = () => {
     <NavLink
       key={link.label}
       to={link.link}
-      className={({ isActive }) => (isActive ? 'active' : '')}
+      className={({ isActive }) => (isActive ? classes.active : '')}
     >
       {link.label}
     </NavLink>
   ));
 
   return (
-    <header>
-      <Container size="md">
-        {/* <MantineLogo size={28} /> */}
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
+    <Container size="xl" h="100%" style={{ display: 'flex', alignItems: 'center' }}>
+      {/* <MantineLogo size={28} /> */}
+      <Group gap={5} visibleFrom="xs">
+        {items}
+      </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
-    </header>
+      <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+    </Container>
   );
 };
