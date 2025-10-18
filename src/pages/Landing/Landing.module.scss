@@ -1,0 +1,18 @@
+@import '@/styles/mantine';
+
+.textContainer {
+  height: 100%;
+  justify-content: center;
+
+  @include smaller-than($mantine-breakpoint-sm) {
+    align-items: center;
+    text-align: center;
+    padding-inline: 16px;
+  }
+
+  @include larger-than($mantine-breakpoint-sm) {
+    align-items: flex-start;
+    text-align: left;
+    padding-inline: 80px;
+  }
+}
