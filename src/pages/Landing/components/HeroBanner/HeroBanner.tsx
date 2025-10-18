@@ -21,6 +21,7 @@ export const HeroBanner: React.FC = () => {
         span={{ base: 12, sm: 6 }}
         order={{ base: 1, sm: 2 }}
         py={{ base: 36, sm: 0 }}
+        px={{ base: 16, sm: 80 }}
       >
         <Transition mounted={mounted} transition="fade-up" duration={1000} timingFunction="ease">
           {(style) => (

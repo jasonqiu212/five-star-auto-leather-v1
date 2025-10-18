@@ -1,16 +1,13 @@
 @use '@/styles/mantine' as *;
 
-.textContainer {
-  height: 100%;
-  justify-content: center;
+.title {
+  margin-bottom: 24px;
 
   @include smaller-than($mantine-breakpoint-sm) {
-    align-items: center;
     text-align: center;
   }
 
   @include larger-than($mantine-breakpoint-sm) {
-    align-items: flex-start;
     text-align: left;
   }
 }
