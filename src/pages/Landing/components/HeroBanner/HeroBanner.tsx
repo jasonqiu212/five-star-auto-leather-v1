@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import SeatImage from '@/assets/seat.jpg';
 import { Button, Grid, Image, Stack, Text, Title, Transition } from '@mantine/core';
 
 import styles from './HeroBanner.module.scss';
@@ -14,7 +15,7 @@ export const HeroBanner: React.FC = () => {
   return (
     <Grid gutter={0}>
       <Grid.Col span={{ base: 12, sm: 6 }} order={{ base: 2, sm: 1 }}>
-        <Image src="/seat.jpg" alt="Five Star Auto Leather" p={0} />
+        <Image src={SeatImage} alt="Five Star Auto Leather" p={0} />
       </Grid.Col>
       <Grid.Col
         bg="black"

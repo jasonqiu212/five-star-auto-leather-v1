@@ -1,5 +1,8 @@
 import React from 'react';
 
+import CustomizationImage from '@/assets/customization.jpg';
+import RepairImage from '@/assets/repair.jpg';
+import UpholsteryImage from '@/assets/upholstery.jpg';
 import { Container, Grid, Image, Stack, Text, Title } from '@mantine/core';
 
 const items = [
@@ -7,19 +10,19 @@ const items = [
     title: 'Upholstery',
     description:
       'We deliver quality car leather seats and interiors at affordable prices. Transform your car with our beautiful handiwork.',
-    imageUrl: '/upholstery.jpg',
+    imageUrl: UpholsteryImage,
   },
   {
     title: 'Customization',
     description:
       'Along with a vast range of quality leather, we also offer personalization details such as custom embroidery and bespoke designs.',
-    imageUrl: '/customization.jpg',
+    imageUrl: CustomizationImage,
   },
   {
     title: 'Repair',
     description:
       'Do you have a rip in your car seat, or a sagging roof? Whether it’s time to refresh or restore your car interiors, we are fully dedicated to your needs.',
-    imageUrl: '/repair.jpg',
+    imageUrl: RepairImage,
   },
 ];
 

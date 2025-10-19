@@ -1,5 +1,6 @@
 import React from 'react';
 
+import VanImage from '@/assets/van.jpg';
 import { Grid, Image, List, Stack, Text, Title } from '@mantine/core';
 
 import styles from './Why.module.scss';
@@ -8,7 +9,7 @@ export const Why: React.FC = () => {
   return (
     <Grid gutter={0}>
       <Grid.Col span={{ base: 12, sm: 5 }} order={{ base: 2, sm: 1 }}>
-        <Image src="/van.jpg" alt="Van" p={0} />
+        <Image src={VanImage} alt="Van" p={0} />
       </Grid.Col>
       <Grid.Col
         span={{ base: 12, sm: 7 }}
