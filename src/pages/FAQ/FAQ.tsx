@@ -1,14 +1,14 @@
-import { Accordion, Container, Title } from '@mantine/core';
+import FAQImage from '@/assets/faq.jpg';
+import { Footer } from '@/components/Footer';
+import { ParallaxTitle } from '@/components/ParallaxTitle';
+import { Accordion, Container, Stack } from '@mantine/core';
 
 export const FAQ: React.FC = () => {
   return (
-    <div>
-      <Container size="lg" py={60}>
-        <Title order={1} mb={30}>
-          Frequently Asked Questions
-        </Title>
-
-        <Accordion variant="separated" radius="md">
+    <Stack gap={0}>
+      <ParallaxTitle backgroundImage={FAQImage} title="Frequently Asked Questions" />
+      <Container size="xl" py="xl" w="100%">
+        <Accordion variant="contained" radius="md">
           <Accordion.Item value="how-long">
             <Accordion.Control>How long does a typical project take?</Accordion.Control>
             <Accordion.Panel>
@@ -43,6 +43,7 @@ export const FAQ: React.FC = () => {
           </Accordion.Item>
         </Accordion>
       </Container>
-    </div>
+      <Footer />
+    </Stack>
   );
 };
