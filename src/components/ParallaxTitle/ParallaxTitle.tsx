@@ -33,7 +33,7 @@ export const ParallaxTitle: React.FC<ParallaxTitleProps> = ({
       />
 
       <Container size="xl" className={styles.content}>
-        <Title order={titleOrder} c="white" className={styles.title}>
+        <Title order={titleOrder} c="white">
           {title}
         </Title>
       </Container>
