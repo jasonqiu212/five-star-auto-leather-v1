@@ -2,6 +2,7 @@ import React from 'react';
 
 import VanImage from '@/assets/van.jpg';
 import { Grid, Image, List, Stack, Text, Title } from '@mantine/core';
+import { IconCheck } from '@tabler/icons-react';
 
 import styles from './Why.module.scss';
 
@@ -25,7 +26,7 @@ export const Why: React.FC = () => {
             Committed to your needs, we want you to feel the love that we have for our work. Come
             visit us, and we will show you that we are:
           </Text>
-          <List>
+          <List icon={<IconCheck size={16} color="var(--mantine-color-red-5)" />}>
             <List.Item>Passionate about what we do</List.Item>
             <List.Item>Creative in our designs</List.Item>
             <List.Item>Quality and service oriented</List.Item>
