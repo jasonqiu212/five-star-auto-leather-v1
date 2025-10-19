@@ -1,10 +1,15 @@
+@use '@/styles/mantine' as *;
+
 .wrapper {
   position: relative;
-  background-image: url(/sparks.jpg);
-  background-attachment: fixed;
+  background-image: url(/business-in-numbers.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include larger-than($mantine-breakpoint-sm) {
+    background-attachment: fixed;
+  }
 }
 
 .overlay {
@@ -13,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
