@@ -8,9 +8,9 @@ import styles from './Header.module.scss';
 
 const links = [
   { key: 'our-story', link: '/our-story', label: 'Our Story' },
-  { key: 'what-we-do', link: '/what-we-do', label: 'What We Do' },
-  { key: 'faq', link: '/faq', label: 'FAQ' },
+  // { key: 'what-we-do', link: '/what-we-do', label: 'What We Do' },
   { key: 'gallery', link: '/gallery', label: 'Gallery' },
+  { key: 'faq', link: '/faq', label: 'FAQ' },
   { key: 'blog', link: '/blog', label: 'Blog' },
 ];
 
