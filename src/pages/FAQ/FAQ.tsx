@@ -1,3 +1,5 @@
+import React from 'react';
+
 import FAQImage from '@/assets/faq.jpg';
 import { Footer } from '@/components/Footer';
 import { ParallaxTitle } from '@/components/ParallaxTitle';
