@@ -1,0 +1,22 @@
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    .title {
+      color: var(--mantine-primary-color-filled);
+    }
+  }
+}
+
+.title {
+  transition: color 0.2s ease;
+}
