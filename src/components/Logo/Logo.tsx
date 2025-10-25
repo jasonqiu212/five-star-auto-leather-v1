@@ -10,7 +10,7 @@ interface LogoProps {
   width?: number;
 }
 
-export const Logo: React.FC<LogoProps> = ({ width = 85 }) => {
+export const Logo: React.FC<LogoProps> = ({ width = 60 }) => {
   const navigate = useNavigate();
 
   return (
