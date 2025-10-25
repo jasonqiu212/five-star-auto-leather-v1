@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Five Star Auto Leather v1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **⚠️ This repository has been migrated to Astro**  
+> This is the original React/Vite version. The project has been migrated to use [Astro](https://astro.build) for better performance and SEO.
+>
+> **New Repository**: [jasonqiu212/five-star-auto-leather](https://github.com/jasonqiu212/five-star-auto-leather)
 
-Currently, two official plugins are available:
+A modern website for [Five Star Auto Leather](https://fivestarautoleather.com), showcasing automotive leather upholstery, customization, and repair services.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- **React 19** - UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **React Router** - Client-side routing
+- **Mantine** - React component library
+- **Sass/SCSS** - CSS preprocessor with CSS modules
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Before you begin, ensure you have the following installed:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Node.js** (v20.19.2 as specified in `.nvmrc`)
+- **pnpm** (package manager)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Using nvm (recommended)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+If you use [nvm](https://github.com/nvm-sh/nvm), the correct Node.js version will be automatically selected:
+
+```bash
+nvm use
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will use the version specified in the `.nvmrc` file (v20.19.2).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installing pnpm
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To install pnpm globally:
+
+```bash
+npm install -g pnpm
 ```
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/jasonqiu212/five-star-auto-leather.git
+cd five-star-auto-leather
+```
+
+2. Install dependencies:
+
+```bash
+pnpm install
+```
+
+## Development
+
+Start the development server:
+
+```bash
+pnpm dev
+```
+
+The application will be available at `http://localhost:5173`
