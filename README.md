@@ -1,6 +1,8 @@
 # Five Star Auto Leather v1
 
-> **⚠️ This repository has been migrated to Astro**  
+> [!NOTE]
+> **⚠️ This repository has been migrated to Astro**
+>
 > This is the original React/Vite version. The project has been migrated to use [Astro](https://astro.build) for better performance and SEO.
 >
 > **New Repository**: [jasonqiu212/five-star-auto-leather](https://github.com/jasonqiu212/five-star-auto-leather)
